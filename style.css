@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.site-header {
+  background: #0f172a;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.18);
+}
+
+.navbar {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #0369a1 100%);
+  color: white;
+  padding: 80px 24px;
+}
+
+.hero-content {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: #7dd3fc;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+
+.hero h2 {
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  font-weight: 500;
+  color: #dbeafe;
+  max-width: 900px;
+  margin-bottom: 24px;
+}
+
+.hero-text {
+  max-width: 780px;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.btn.primary {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.btn.primary:hover {
+  background: #7dd3fc;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  border: 1px solid #93c5fd;
+  color: white;
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.section {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 90px 24px;
+}
+
+.alt-section {
+  max-width: none;
+  background: white;
+  padding-left: max(24px, calc((100% - 1150px) / 2 + 24px));
+  padding-right: max(24px, calc((100% - 1150px) / 2 + 24px));
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.section-intro {
+  max-width: 760px;
+  color: #4b5563;
+  margin-bottom: 34px;
+  font-size: 1.05rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.card,
+.research-box {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.alt-section .research-box {
+  max-width: 900px;
+}
+
+.card h3,
+.research-box h3 {
+  color: #0f172a;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.card p,
+.research-box p {
+  color: #4b5563;
+}
+
+.research-box ul {
+  margin-top: 18px;
+  padding-left: 22px;
+  color: #374151;
+}
+
+.research-box li {
+  margin-bottom: 8px;
+}
+
+.note {
+  margin-top: 26px;
+  padding: 18px 20px;
+  background: #e0f2fe;
+  border-left: 4px solid #0284c7;
+  color: #0f172a;
+  border-radius: 10px;
+  max-width: 900px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.contact-links a {
+  color: #0369a1;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 28px 20px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 850px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 90px 24px;
+  }
+}
