@@ -397,22 +397,37 @@ body {
   font-size: 0.9rem;
 }
 
-/* Certifications credential portfolio */
+/* Credential Metadata */
+
+.credential-meta {
+  display: inline-block;
+  margin: 4px 0 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  color: #075985 !important;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Certifications Credential Portfolio */
 
 .credential-portfolio {
-  margin-top: 30px;
+  margin-top: 46px;
   max-width: 920px;
-  padding: 24px 26px;
+  padding: 26px 28px;
   border-radius: 18px;
   background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%);
   border: 1px solid #bae6fd;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
 }
 
 .credential-portfolio p {
   color: #334155;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   max-width: 760px;
+  font-size: 1.02rem;
 }
 
 /* Confidentiality Note */
@@ -599,5 +614,10 @@ footer {
 
   .section-label {
     font-size: 0.75rem;
+  }
+
+  .credential-meta {
+    border-radius: 14px;
+    line-height: 1.5;
   }
 }
