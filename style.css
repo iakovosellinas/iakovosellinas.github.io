@@ -397,6 +397,24 @@ body {
   font-size: 0.9rem;
 }
 
+/* Certifications credential portfolio */
+
+.credential-portfolio {
+  margin-top: 30px;
+  max-width: 920px;
+  padding: 24px 26px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%);
+  border: 1px solid #bae6fd;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.credential-portfolio p {
+  color: #334155;
+  margin-bottom: 18px;
+  max-width: 760px;
+}
+
 /* Confidentiality Note */
 
 .note {
@@ -537,6 +555,10 @@ footer {
 
   .section h2 {
     font-size: 2rem;
+  }
+
+  .credential-portfolio {
+    padding: 22px;
   }
 }
 
