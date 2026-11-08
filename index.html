@@ -52,7 +52,7 @@
     <nav class="navbar">
       <a href="#home" class="logo">Iakovos Ellinas<span>.</span></a>
 
-      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -379,6 +379,35 @@
     <p>© 2026 Iakovos Ellinas · Information Technology Security Consultant · Nicosia, Cyprus</p>
   </footer>
 
-  <script src="script.js?v=20261108c"></script>
+  <script>
+  /* Mobile navigation menu (inline, so it never depends on a cached script.js) */
+  (function () {
+    var toggle = document.querySelector(".menu-toggle");
+    var links = document.querySelector(".nav-links");
+    if (!toggle || !links) return;
+    toggle.setAttribute("type", "button");
+
+    function setOpen(open) {
+      links.classList.toggle("open", open);
+      toggle.classList.toggle("active", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+
+    toggle.onclick = function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      setOpen(!links.classList.contains("open"));
+    };
+
+    var items = links.querySelectorAll("a");
+    for (var i = 0; i < items.length; i++) {
+      items[i].addEventListener("click", function () { setOpen(false); });
+    }
+
+    document.addEventListener("click", function (e) {
+      if (!links.contains(e.target) && !toggle.contains(e.target)) setOpen(false);
+    });
+  })();
+  </script>
 </body>
 </html>
