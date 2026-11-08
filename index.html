@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Iakovos Ellinas | Information Technology Security Consultant</title>
-
   <meta name="description" content="Iakovos Ellinas, Information Technology Security Consultant. GRC, cyber risk, IT audit, privacy and AI governance. Lead Auditor in ISO/IEC 27001, ISO/IEC 27701 and ISO/IEC 42001." />
 
   <!-- Open Graph / LinkedIn Preview -->
@@ -14,21 +13,23 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://iakovosellinas.github.io" />
   <meta property="og:image" content="https://iakovosellinas.github.io/iakovos_ellinas_linkedin_thumbnail.png" />
-  <meta property="og:image:alt" content="Iakovos Ellinas professional portfolio: Information Security, GRC, Privacy and AI Governance." />
-
-  <!-- Twitter / General Social Preview -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Iakovos Ellinas | Information Technology Security Consultant" />
   <meta name="twitter:description" content="GRC, cyber risk, IT audit, privacy and AI governance. Lead Auditor in ISO/IEC 27001, 27701 and 42001." />
   <meta name="twitter:image" content="https://iakovosellinas.github.io/iakovos_ellinas_linkedin_thumbnail.png" />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ?v= forces browsers to load the new stylesheet instead of a cached old one -->
+  <link rel="stylesheet" href="style.css?v=20261108" />
 </head>
 
 <body>
   <header class="site-header">
     <nav class="navbar">
-      <div class="logo">Iakovos Ellinas</div>
+      <a href="#home" class="logo">Iakovos Ellinas<span>.</span></a>
 
       <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
@@ -37,14 +38,12 @@
       </button>
 
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#cv">CV</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="Iakovos_Ellinas_CV.pdf" class="nav-cta" target="_blank" rel="noopener">Download CV</a></li>
       </ul>
     </nav>
   </header>
@@ -52,281 +51,213 @@
   <main>
     <!-- HERO -->
     <section id="home" class="hero">
-      <div class="hero-inner">
+      <div class="container hero-inner">
         <div class="hero-content">
-          <p class="eyebrow">Information Technology Security Consultant</p>
+          <p class="eyebrow"><span class="dot"></span>Information Technology Security Consultant</p>
 
           <h1>Iakovos Ellinas</h1>
 
-          <h2>
-            Security, Privacy &amp; AI Governance | GRC · Cyber Risk · IT Audit · Financial Services Regulation
-          </h2>
+          <p class="hero-lead">
+            Security, privacy and AI governance for regulated organisations.
+          </p>
 
           <p class="hero-text">
-            I help organisations turn security, privacy and AI requirements into controls that work and evidence that holds up in an audit. Lead Auditor in ISO/IEC 27001, ISO/IEC 27701 and ISO/IEC 42001.
+            I help organisations turn security, privacy and AI requirements into controls that work and evidence that holds up in an audit, with a focus on GRC, IT audit and financial services regulation.
           </p>
 
           <div class="hero-buttons">
-            <a href="Iakovos_Ellinas_CV.pdf" class="btn primary" target="_blank" rel="noopener">Download CV</a>
-            <a href="#experience" class="btn secondary">View Experience</a>
+            <a href="Iakovos_Ellinas_CV.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download CV</a>
+            <a href="https://www.linkedin.com/in/iakovosellinas" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn Profile</a>
           </div>
         </div>
 
-        <div class="hero-panel">
-          <div class="panel-header">
-            <span class="status-dot"></span>
-            <span>Lead Auditor Credentials</span>
+        <aside class="cred-panel" aria-label="Lead Auditor credentials">
+          <p class="cred-title">Lead Auditor</p>
+          <ul class="cred-list">
+            <li><span class="cred-std">ISO/IEC 27001</span><span class="cred-area">Information Security</span></li>
+            <li><span class="cred-std">ISO/IEC 27701</span><span class="cred-area">Privacy</span></li>
+            <li><span class="cred-std">ISO/IEC 42001</span><span class="cred-area">AI Governance</span></li>
+          </ul>
+          <div class="cred-tags">
+            <span>DORA</span><span>GDPR</span><span>SOC 2</span><span>ISAE 3402</span><span>EU AI Act</span><span>PQC</span>
           </div>
-
-          <div class="focus-grid">
-            <div class="focus-item wide">ISO/IEC 27001 · Information Security</div>
-            <div class="focus-item wide">ISO/IEC 27701 · Privacy</div>
-            <div class="focus-item wide">ISO/IEC 42001 · AI Governance</div>
-            <div class="focus-item">DORA</div>
-            <div class="focus-item">GDPR</div>
-            <div class="focus-item">SOC 2 / ISAE</div>
-            <div class="focus-item">EU AI Act</div>
-          </div>
-
-          <div class="panel-footer">
-            Governance · Risk · Compliance · Assurance
-          </div>
-        </div>
+        </aside>
       </div>
-    </section>
 
-    <!-- KEY FIGURES -->
-    <section class="stats-strip" aria-label="Key figures">
-      <div class="stats-inner">
-        <div class="stat"><span class="stat-num">3</span><span class="stat-label">ISO 27001 implementations taken to certification</span></div>
-        <div class="stat"><span class="stat-num">11</span><span class="stat-label">Financial institutions supported on DORA and regulation</span></div>
-        <div class="stat"><span class="stat-num">12</span><span class="stat-label">SOC 2, ISAE and ITGC assurance engagements</span></div>
-        <div class="stat"><span class="stat-num">3</span><span class="stat-label">ISO Lead Auditor certifications</span></div>
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><span class="stat-num">3</span><span class="stat-label">ISO 27001 implementations taken to certification</span></div>
+          <div class="stat"><span class="stat-num">11</span><span class="stat-label">Financial institutions supported on DORA and regulation</span></div>
+          <div class="stat"><span class="stat-num">12</span><span class="stat-label">SOC 2, ISAE and ITGC assurance engagements</span></div>
+          <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Assurance reports supported to issuance</span></div>
+        </div>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="section">
-      <div class="section-heading">
-        <p class="section-label">About</p>
-        <h2>From numbers to governance</h2>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
+      <div class="container about-grid">
+        <div>
+          <p class="section-label">About</p>
+          <h2>From numbers to governance</h2>
+          <p class="lead-p">
             My path into cybersecurity started with numbers. A BSc in Mathematics and Statistics taught me to think in risk, probability and structure, and an MSc in Computer and Network Security gave me the technical depth behind it. Serving as an army officer taught me to lead a team, take ownership and stay calm under pressure.
           </p>
           <p>
-            Today I work as an Information Technology Security Consultant at KPMG Cyprus, across financial services and other regulated sectors. The question that drives my work is simple: how do you know your controls are actually working? Good governance is not about more documents. It is about clear ownership, tested controls and evidence the business can trust.
-          </p>
-          <p>
-            Long term, I am building towards security leadership, where technical understanding, risk thinking and business communication come together.
+            Today I work as an Information Technology Security Consultant at KPMG Cyprus, across financial services and other regulated sectors. The question that drives my work is simple: <strong>how do you know your controls are actually working?</strong> Good governance is not about more documents. It is about clear ownership, tested controls and evidence the business can trust.
           </p>
         </div>
 
-        <div class="about-facts">
-          <div class="fact"><span>Based in</span><strong>Nicosia, Cyprus</strong></div>
-          <div class="fact"><span>Focus</span><strong>GRC · IT Audit · Privacy · AI Governance · Post-Quantum Readiness</strong></div>
-          <div class="fact"><span>Education</span><strong>MSc Computer and Network Security (9.25/10) · BSc Mathematics and Statistics</strong></div>
-          <div class="fact"><span>Languages</span><strong>Greek (native) · English (B2) · French (B1)</strong></div>
-        </div>
+        <dl class="facts">
+          <div><dt>Based in</dt><dd>Nicosia, Cyprus</dd></div>
+          <div><dt>Current role</dt><dd>Information Technology Security Consultant, KPMG Cyprus</dd></div>
+          <div><dt>Education</dt><dd>MSc Computer and Network Security (9.25/10)<br />BSc Mathematics and Statistics</dd></div>
+          <div><dt>Focus</dt><dd>GRC · IT Audit · Privacy · AI Governance · Post-Quantum Readiness</dd></div>
+          <div><dt>Languages</dt><dd>Greek (native) · English (B2) · French (B1)</dd></div>
+        </dl>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="section alt-section">
-      <div class="section-heading">
-        <p class="section-label">Professional Experience</p>
-        <h2>Experience</h2>
-      </div>
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <p class="section-label">Experience</p>
+        <h2>Professional experience</h2>
 
-      <div class="research-box experience-box">
-        <div class="exp-head">
-          <div>
-            <h3>Information Technology Security Consultant</h3>
-            <p class="exp-org">KPMG Cyprus · Technology Consulting</p>
-          </div>
-          <p class="exp-date">Feb 2025 – Present · Nicosia</p>
+        <div class="timeline">
+          <article class="tl-item">
+            <div class="tl-meta">
+              <p class="tl-date">Feb 2025 – Present</p>
+              <p class="tl-place">Nicosia, Cyprus</p>
+            </div>
+            <div class="tl-body">
+              <h3>Information Technology Security Consultant</h3>
+              <p class="tl-org">KPMG Cyprus · Technology Consulting</p>
+              <p class="tl-intro">Clients in financial services, fintech, legal, technology and multinational groups.</p>
+              <ul>
+                <li>Delivered <strong>3 ISO/IEC 27001 implementation projects</strong>, drafting <strong>20+ security policies and procedures</strong> and building risk registers, taking <strong>3 clients through to certification</strong>.</li>
+                <li>Supported <strong>11 financial institutions</strong> on DORA implementation and on PSD2, CRD VI, SWIFT CSCF and Central Bank of Cyprus regulatory compliance reviews.</li>
+                <li>Performed control testing and evidence review across <strong>12 SOC 2, ISAE 3000/3402 and ITGC engagements</strong>, supporting the issuance of <strong>10+ assurance reports</strong>.</li>
+                <li>Implemented GDPR programmes, from compliance gap assessments to data protection policies and procedures.</li>
+                <li>Conducted cloud security and third-party provider audits; reported findings, risk assessments and compliance matrices to client management.</li>
+                <li>Active contributor to <strong>2 international research projects</strong> on post-quantum cryptography and quantum-secure communications.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-meta">
+              <p class="tl-date">Jul 2019 – Present</p>
+              <p class="tl-place">Cyprus</p>
+            </div>
+            <div class="tl-body">
+              <h3>Lieutenant (Reserve)</h3>
+              <p class="tl-org">Cyprus Army</p>
+              <p>Completed officer training in Crete, Greece; active service Jul 2019 – Sep 2020, leading a unit of 30 soldiers. Reserve officer since.</p>
+            </div>
+          </article>
         </div>
 
-        <p class="exp-intro">Clients in financial services, fintech, legal, technology and multinational groups.</p>
-
-        <ul class="exp-list">
-          <li>Delivered <strong>3 ISO/IEC 27001 implementation projects</strong>, drafting <strong>20+ security policies and procedures</strong> and building risk registers, taking <strong>3 clients through to certification</strong>.</li>
-          <li>Supported <strong>11 financial institutions</strong> on DORA implementation and on PSD2, CRD VI, SWIFT CSCF and Central Bank of Cyprus regulatory compliance reviews.</li>
-          <li>Performed control testing and evidence review across <strong>12 SOC 2, ISAE 3000/3402 and IT general controls (ITGC) engagements</strong>, supporting the issuance of <strong>10+ assurance reports</strong>.</li>
-          <li>Implemented GDPR programmes, from compliance gap assessments to data protection policies and procedures.</li>
-          <li>Conducted cloud security and third-party provider audits; reported findings, risk assessments and compliance matrices to client management.</li>
-          <li>Active contributor to <strong>2 international research projects</strong> on post-quantum cryptography (PQC) transition and quantum-secure communications.</li>
-        </ul>
-      </div>
-
-      <div class="research-box experience-box small-box">
-        <div class="exp-head">
-          <div>
-            <h3>Lieutenant (Reserve)</h3>
-            <p class="exp-org">Cyprus Army</p>
-          </div>
-          <p class="exp-date">Jul 2019 – Present</p>
-        </div>
-        <p>Completed officer training in Crete, Greece; active service Jul 2019 – Sep 2020, leading a unit of 30 soldiers. Reserve officer since.</p>
-      </div>
-
-      <p class="note">
-        Due to confidentiality obligations, client names, internal deliverables and project-specific details are not disclosed.
-      </p>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="section-heading">
-        <p class="section-label">Selected Projects</p>
-        <h2>Quantum-Safe Security</h2>
-      </div>
-
-      <p class="section-intro">
-        International research projects I contribute to through KPMG Cyprus.
-      </p>
-
-      <div class="cards">
-        <div class="card">
-          <p class="card-tag">EU-funded research · Jul 2026 – Present</p>
-          <h3>Post-Quantum Cryptography Transition (FOCAL)</h3>
-          <p>
-            Research project on the transition to Post-Quantum Cryptography (PQC) for networked environments and critical infrastructure. I contribute to the development of PQC transition metrics and to policy analysis and recommendations supporting the move to quantum-safe cryptography.
-          </p>
+        <h3 class="sub-h">Research projects</h3>
+        <div class="grid-2">
+          <article class="card">
+            <p class="card-tag">EU-funded research · 2026 – Present</p>
+            <h4>Post-Quantum Cryptography Transition (FOCAL)</h4>
+            <p>Research on the transition to Post-Quantum Cryptography for networked environments and critical infrastructure. I contribute to PQC transition metrics and to policy analysis and recommendations.</p>
+          </article>
+          <article class="card">
+            <p class="card-tag">Research project · 2026 – Present</p>
+            <h4>Quantum-Secure Communications (CYOGS II)</h4>
+            <p>Research on quantum-secure communications infrastructure in Cyprus. I contribute from a governance, risk and commercial adoption perspective.</p>
+          </article>
         </div>
 
-        <div class="card">
-          <p class="card-tag">Research project · Jul 2026 – Present</p>
-          <h3>Quantum-Secure Communications (CYOGS II)</h3>
-          <p>
-            Research project on quantum-secure communications infrastructure in Cyprus. I contribute from a governance, risk and commercial adoption perspective.
-          </p>
-        </div>
+        <p class="note">Due to confidentiality obligations, client names, internal deliverables and project-specific details are not disclosed.</p>
       </div>
     </section>
 
     <!-- RESEARCH -->
-    <section id="research" class="section alt-section">
-      <div class="section-heading">
+    <section id="research" class="section">
+      <div class="container">
         <p class="section-label">MSc Thesis · Published</p>
         <h2>Research</h2>
-      </div>
 
-      <div class="research-box">
-        <h3>Evaluation of the Quality of Privacy Policy Templates Generated by AI</h3>
-        <p class="exp-org">MSc in Computer and Network Security · Open University of Cyprus · May 2026</p>
-
-        <p>
-          This research examined whether AI tools can produce privacy policies that are not only formally aligned with the GDPR, but also clear, complete and understandable for the people they are written for. Policies generated by ChatGPT, Copilot, Gemini and specialised generators were evaluated against GDPR Articles 12–14 and the EDPB transparency guidelines across three scenarios: e-commerce, a health app and an educational platform.
-        </p>
-
-        <p>
-          The findings show that AI can produce a strong first draft, especially with well-structured prompts, but can create an illusion of legal completeness while relying on vague or generic wording. Human legal review and the accountability of the controller remain essential.
-        </p>
-
-        <div class="research-tags">
-          <span>GDPR Articles 12–14</span>
-          <span>EDPB Transparency Guidelines</span>
-          <span>Accountability</span>
-          <span>Human Oversight</span>
-          <span>AI Governance</span>
-        </div>
-
-        <a href="https://kypseli.ouc.ac.cy/entities/theses/2e19e883-4192-4420-a08a-af963757eb36" class="btn primary research-link" target="_blank" rel="noopener">
-          Read the thesis (OUC Kypseli repository)
-        </a>
+        <article class="research">
+          <div class="research-main">
+            <h3>Evaluation of the Quality of Privacy Policy Templates Generated by AI</h3>
+            <p class="tl-org">Open University of Cyprus · May 2026</p>
+            <p>
+              Can AI tools produce privacy policies that are not only formally aligned with the GDPR, but also clear, complete and understandable? Policies generated by ChatGPT, Copilot, Gemini and specialised generators were evaluated against GDPR Articles 12–14 and the EDPB transparency guidelines in three scenarios: e-commerce, a health app and an educational platform.
+            </p>
+            <p>
+              <strong>Finding:</strong> AI can produce a strong first draft, especially with well-structured prompts, but can create an illusion of legal completeness while relying on vague or generic wording. Human legal review and controller accountability remain essential.
+            </p>
+            <div class="tags">
+              <span>GDPR Art. 12–14</span><span>EDPB Guidelines</span><span>Transparency</span><span>Human Oversight</span><span>AI Governance</span>
+            </div>
+          </div>
+          <a href="https://kypseli.ouc.ac.cy/entities/theses/2e19e883-4192-4420-a08a-af963757eb36" class="btn btn-primary" target="_blank" rel="noopener">Read the thesis</a>
+        </article>
       </div>
     </section>
 
     <!-- CERTIFICATIONS -->
-    <section id="certifications" class="section">
-      <div class="section-heading">
+    <section id="certifications" class="section section-alt">
+      <div class="container">
         <p class="section-label">Credentials</p>
         <h2>Certifications</h2>
+
+        <div class="grid-3">
+          <article class="card cert cert-lead">
+            <p class="cert-badge">Lead Auditor</p>
+            <h4>ISO/IEC 42001:2023</h4>
+            <p class="cert-name">AI Management System</p>
+            <p class="cert-meta">BSI Training Academy · Aug 2026</p>
+            <p class="cert-id">ID ENR-02040918</p>
+          </article>
+          <article class="card cert cert-lead">
+            <p class="cert-badge">Lead Auditor</p>
+            <h4>ISO/IEC 27701:2025</h4>
+            <p class="cert-name">Privacy Information Management System</p>
+            <p class="cert-meta">Mastermind Assurance · Jul 2026</p>
+            <p class="cert-id">ID oufglzyovj</p>
+          </article>
+          <article class="card cert cert-lead">
+            <p class="cert-badge">Lead Auditor</p>
+            <h4>ISO/IEC 27001:2022</h4>
+            <p class="cert-name">Information Security Management System</p>
+            <p class="cert-meta">TÜV AUSTRIA · Jan 2026</p>
+            <p class="cert-id">No 2026/469</p>
+          </article>
+        </div>
+
+        <div class="grid-2 cert-small">
+          <article class="card cert">
+            <h4>Exposure Management Certification</h4>
+            <p class="cert-meta">XM Cyber · Apr 2026 · ID arpybjhuug</p>
+          </article>
+          <article class="card cert">
+            <h4>Risk Reporting to the Board for Modern CISOs</h4>
+            <p class="cert-meta">XM Cyber · Feb 2026 · ID ikvctzrawn</p>
+          </article>
+        </div>
+
+        <p class="more-link"><a href="https://www.linkedin.com/in/iakovosellinas/details/certifications/" target="_blank" rel="noopener">Verify credentials on LinkedIn →</a></p>
       </div>
-
-      <p class="section-intro">
-        Lead Auditor credentials across information security, privacy and AI management systems, plus cyber risk and exposure management.
-      </p>
-
-      <div class="cards certification-cards">
-        <div class="card certification-card featured-cert">
-          <h3>ISO/IEC 42001:2023 AI Management System Lead Auditor</h3>
-          <p class="credential-meta">BSI Training Academy · Aug 2026</p>
-          <p class="credential-id">Credential ID: ENR-02040918</p>
-          <p>Auditing AI Management Systems against ISO/IEC 42001 and ISO 19011: AI governance, risk management, audit planning, execution and reporting.</p>
-        </div>
-
-        <div class="card certification-card featured-cert">
-          <h3>ISO/IEC 27701:2025 Lead Auditor</h3>
-          <p class="credential-meta">Mastermind Assurance · Jul 2026</p>
-          <p class="credential-id">Credential ID: oufglzyovj</p>
-          <p>Auditing Privacy Information Management Systems: privacy governance, risk assessment, Statement of Applicability, nonconformities and integration with ISO/IEC 27001.</p>
-        </div>
-
-        <div class="card certification-card featured-cert">
-          <h3>ISO/IEC 27001:2022 Lead Auditor</h3>
-          <p class="credential-meta">TÜV AUSTRIA · Jan 2026</p>
-          <p class="credential-id">Certificate No: 2026/469</p>
-          <p>ISMS auditing, risk assessment, audit planning, audit techniques and compliance assessment against ISO/IEC 27001:2022.</p>
-        </div>
-
-        <div class="card certification-card">
-          <h3>Exposure Management Certification</h3>
-          <p class="credential-meta">XM Cyber · Apr 2026</p>
-          <p class="credential-id">Credential ID: arpybjhuug</p>
-          <p>Exposure and attack surface management, cyber risk prioritisation, vulnerability remediation and security validation.</p>
-        </div>
-
-        <div class="card certification-card">
-          <h3>Risk Reporting to the Board for Modern CISOs</h3>
-          <p class="credential-meta">XM Cyber · Feb 2026</p>
-          <p class="credential-id">Credential ID: ikvctzrawn</p>
-          <p>Board-level cyber risk communication, executive reporting and translating security posture into business risk language.</p>
-        </div>
-      </div>
-
-      <div class="credential-portfolio">
-        <p>
-          Full credential details and verification links are available on my LinkedIn profile.
-        </p>
-
-        <a href="https://www.linkedin.com/in/iakovosellinas/details/certifications/" class="btn primary" target="_blank" rel="noopener">
-          View Credential Portfolio
-        </a>
-      </div>
-    </section>
-
-    <!-- CV -->
-    <section id="cv" class="section alt-section">
-      <div class="section-heading">
-        <p class="section-label">Curriculum Vitae</p>
-        <h2>CV</h2>
-      </div>
-
-      <p class="section-intro">
-        One-page overview of my experience, certifications, education and research.
-      </p>
-
-      <a href="Iakovos_Ellinas_CV.pdf" class="btn primary" target="_blank" rel="noopener">Download CV (PDF)</a>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="section-heading">
-        <p class="section-label">Get in Touch</p>
-        <h2>Contact</h2>
-      </div>
-
-      <p class="section-intro">
-        For professional contact, collaboration or networking on security, privacy and AI governance, the best way to reach me is through LinkedIn.
-      </p>
-
-      <div class="contact-links">
-        <a href="https://www.linkedin.com/in/iakovosellinas" class="btn primary" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    <section id="contact" class="section contact">
+      <div class="container contact-inner">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2>Let's connect</h2>
+          <p>For professional contact, collaboration or networking on security, privacy and AI governance, the best way to reach me is through LinkedIn.</p>
+        </div>
+        <div class="contact-buttons">
+          <a href="https://www.linkedin.com/in/iakovosellinas" class="btn btn-primary" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <a href="Iakovos_Ellinas_CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download CV</a>
+        </div>
       </div>
     </section>
   </main>
