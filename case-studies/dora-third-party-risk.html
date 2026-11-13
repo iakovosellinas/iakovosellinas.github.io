@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DORA ICT third-party risk for a payments company | Case study | Iakovos Ellinas</title>
+  <meta name="description" content="Sample case study with a fictional payments company: register of information, critical or important functions, Article 30 contract gaps, concentration risk and exit strategies under DORA." />
+  <meta property="og:title" content="DORA ICT third-party risk for a payments company | Case study" />
+  <meta property="og:description" content="Sample case study with a fictional payments company: register of information, critical or important functions, Article 30 contract gaps, concentration risk and exit strategies under DORA." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://iakovosellinas.github.io/case-studies/dora-third-party-risk.html" />
+  <meta property="og:image" content="https://iakovosellinas.github.io/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://iakovosellinas.github.io/case-studies/dora-third-party-risk.html" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <meta name="theme-color" content="#06122b" />
+  <meta name="color-scheme" content="light dark" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-ARov/mYPTQEndU2yeNBVzM1+QH+PbEikl1nr+9LRRgg='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io https://api.web3forms.com; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="preload" href="../fonts/inter-Regular.woff?v=2" as="font" type="font/woff" crossorigin />
+
+  <!-- Theme: saved choice, else the visitor's system setting (runs before paint, no flash) -->
+  <script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("theme"); } catch (e) {}
+    if (t !== "light" && t !== "dark") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+
+  </script>
+
+  <link rel="stylesheet" href="../style.css?v=20261113j" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="../" class="logo">Iakovos Ellinas<span>.</span></a>
+      <div class="nav-actions">
+        <a class="case-back" href="../#case-studies">&larr; All case studies</a>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Light / dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero case-hero">
+      <div class="container">
+        <p class="eyebrow"><span class="dot"></span>Case study · DORA ICT third-party risk</p>
+        <h1>Bringing 60 ICT providers under control for DORA</h1>
+        <p class="hero-lead">How I would build the register of information, find what really supports critical functions, fix the contracts and plan realistic exits for a payments company.</p>
+        <p class="case-disclaimer">Sample work. The company and all figures below are fictional and do not describe any client engagement. The scenario reflects common situations in this type of project.</p>
+        <dl class="case-facts"><div><dt>Company</dt><dd>Orvella Pay (fictional), EU e-money institution, 150 staff</dd></div><div><dt>Starting point</dt><dd>60+ ICT providers spread across three spreadsheets</dd></div><div><dt>Driver</dt><dd>DORA (Regulation (EU) 2022/2554), applicable since 17 January 2025</dd></div><div><dt>Constraint</dt><dd>Small risk team, contracts owned by different departments</dd></div></dl>
+      </div>
+    </section>
+    <section class="section case-section">
+      <div class="container case-container">
+        <p class="section-label">01 · The situation</p>
+        <h2>What the company was facing</h2>
+        <p>Orvella Pay used many ICT providers: a core payments platform, a KYC service, cloud hosting, card processing and dozens of smaller SaaS tools. Procurement, finance and IT each kept their own list, and none of them matched.</p>
+        <p>Under DORA the company must keep a register of information on all ICT contractual arrangements, know which ones support critical or important functions, have contracts with specific provisions and maintain exit strategies for critical services. The supervisor can ask for the register at any time.</p>
+      </div>
+    </section>
+    <section class="section case-section section-alt">
+      <div class="container case-container">
+        <p class="section-label">02 · Key decisions</p>
+        <h2>Five decisions that shaped the project</h2>
+        <ol class="decisions">
+          <li class="decision">
+            <h3>Build the inventory from money, not from memory</h3>
+            <p><strong>Decision:</strong> Combine procurement records, accounts payable and corporate card spend with the IT list, then confirm each arrangement with its business owner.</p>
+            <p><strong>Why:</strong> Payments reveal tools that nobody remembers to declare. In this kind of exercise, card spend often uncovers SaaS tools that hold customer or employee data.</p>
+            <p class="trade"><strong>Trade-off:</strong> Reconciling three sources takes several weeks, but a register built on one list would be incomplete from day one.</p>
+          </li>
+          <li class="decision">
+            <h3>Start from critical or important functions, not from providers</h3>
+            <p><strong>Decision:</strong> First agree with management which functions are critical or important (for example payment processing, customer onboarding and safeguarding reconciliation). Then map which ICT services support them.</p>
+            <p><strong>Why:</strong> This keeps attention on the small number of providers that really matter. Of 60+ arrangements, about 9 support critical or important functions in this scenario.</p>
+            <p class="trade"><strong>Trade-off:</strong> Function definitions need management sign-off, which can take time, but without it the whole classification can be challenged.</p>
+          </li>
+          <li class="decision">
+            <h3>Fix contracts by priority, with addenda instead of renegotiation</h3>
+            <p><strong>Decision:</strong> Assess every contract against Article 30. For the arrangements supporting critical or important functions, close the gaps first through a standard DORA addendum.</p>
+            <p><strong>Why:</strong> Full renegotiation with large providers can take months. A targeted addendum closes the regulatory gaps faster.</p>
+            <p class="trade"><strong>Trade-off:</strong> Some large providers only accept their own standard DORA terms, so each version is compared with the requirements and any remaining gap is recorded as a risk.</p>
+          </li>
+          <li class="decision">
+            <h3>Treat concentration risk as a decision, not as a finding</h3>
+            <p><strong>Decision:</strong> Two critical services run with the same cloud provider. Instead of a costly multi-cloud move, the company accepts the risk with compensating controls: multi-zone architecture, tested restores and a documented substitution path. The decision is recorded and approved by management.</p>
+            <p><strong>Why:</strong> Article 29 asks firms to assess concentration risk. It does not require removing every dependency; it requires a conscious, documented decision.</p>
+            <p class="trade"><strong>Trade-off:</strong> The residual risk remains and is reviewed every year or when the architecture changes.</p>
+          </li>
+          <li class="decision">
+            <h3>Test exit strategies, do not only write them</h3>
+            <p><strong>Decision:</strong> For each provider supporting a critical or important function, a documented exit plan with alternatives, data export formats and timelines, tested through a tabletop exercise, and for the core platform, an actual data export test.</p>
+            <p><strong>Why:</strong> Article 28(8) requires exit strategies that are documented and tested. An untested plan usually fails on data formats or timelines.</p>
+            <p class="trade"><strong>Trade-off:</strong> Testing exits takes effort from the provider and from internal teams, so it is planned once a year per critical provider.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="section case-section">
+      <div class="container case-container">
+        <p class="section-label">03 · Artefact excerpt</p>
+        <h2>Contract gap assessment (excerpt)</h2>
+        <div class="table-wrap"><table class="case-table">
+          <caption>Core payments platform contract against DORA Article 30 (fictional)</caption>
+          <thead><tr><th scope="col">Requirement</th><th scope="col">Found in contract</th><th scope="col">Action</th></tr></thead>
+          <tbody><tr><td>Locations where services are provided and data is processed</td><td>Partly: data location stated, service locations missing</td><td>Addendum clause on all service and processing locations</td></tr><tr><td>Assistance in an ICT incident related to the service</td><td>Yes, within the support SLA</td><td>None; confirm response times match the incident process</td></tr><tr><td>Termination rights and minimum notice periods</td><td>Yes</td><td>None</td></tr><tr><td>Unrestricted rights of access, inspection and audit (critical or important functions)</td><td>No: only annual summary report</td><td>Addendum: audit and inspection rights for the company and the competent authority</td></tr><tr><td>Participation in the company's threat-led penetration testing (critical or important functions)</td><td>No</td><td>Addendum clause; agree practical rules of engagement</td></tr><tr><td>Exit strategies and a mandatory adequate transition period (critical or important functions)</td><td>No</td><td>Addendum with transition period and data return in an agreed format</td></tr></tbody>
+        </table></div>
+        <p class="table-note">Requirements summarised from Article 30 of DORA. The full gap assessment covers every arrangement in the register.</p>
+      </div>
+    </section>
+    <section class="section case-section section-alt">
+      <div class="container case-container">
+        <p class="section-label">04 · What gets delivered</p>
+        <h2>Deliverables</h2>
+        <ul class="case-list"><li>Register of information on all ICT contractual arrangements, aligned with the supervisory template</li><li>Assessment of critical or important functions with management sign-off</li><li>Contract gap matrix against Article 30 and a prioritised remediation plan</li><li>Concentration risk assessment with documented management decisions</li><li>Tested exit strategies for every provider supporting a critical or important function</li><li>A short board report: where the company stands, what is left and what it costs</li></ul>
+      </div>
+    </section>
+    <section class="section case-section">
+      <div class="container case-container">
+        <p class="section-label">05 · After go-live</p>
+        <h2>What I would keep watching</h2>
+        <ul class="case-list"><li><strong>New providers:</strong> DORA checks must be part of procurement, so a new tool cannot be used before it is assessed and added to the register.</li><li><strong>Subcontractors:</strong> critical providers often depend on their own suppliers. Changes in that chain must be notified and assessed.</li><li><strong>Annual cycle:</strong> the register, concentration risk and exit tests follow a yearly calendar, so the work does not restart from zero before each supervisory request.</li></ul>
+        <p class="case-takeaway">DORA third-party risk is not a procurement form. It is knowing which providers your critical services depend on, and being able to prove you could continue without them.</p>
+        <p class="case-sources">Reference: <a href="https://eur-lex.europa.eu/eli/reg/2022/2554/oj" target="_blank" rel="noopener">Regulation (EU) 2022/2554 (DORA), Articles 28–30 (EUR-Lex)</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Iakovos Ellinas · Information Security &amp; Technology Consultant · Nicosia, Cyprus</p>
+    <p class="footer-trust">Privacy by design: no cookies, no trackers, no third-party scripts or fonts. Found a security issue? See <a href="/.well-known/security.txt">security.txt</a>.</p>
+  </footer>
+  <script src="../site.js?v=20261113d" defer></script>
+</body>
+</html>

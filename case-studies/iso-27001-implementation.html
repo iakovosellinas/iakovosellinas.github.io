@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISO 27001 implementation for a SaaS company | Case study | Iakovos Ellinas</title>
+  <meta name="description" content="Sample case study with a fictional company: scoping, risk assessment, Statement of Applicability and evidence for ISO/IEC 27001 certification." />
+  <meta property="og:title" content="ISO 27001 implementation for a SaaS company | Case study" />
+  <meta property="og:description" content="Sample case study with a fictional company: scoping, risk assessment, Statement of Applicability and evidence for ISO/IEC 27001 certification." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://iakovosellinas.github.io/case-studies/iso-27001-implementation.html" />
+  <meta property="og:image" content="https://iakovosellinas.github.io/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://iakovosellinas.github.io/case-studies/iso-27001-implementation.html" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <meta name="theme-color" content="#06122b" />
+  <meta name="color-scheme" content="light dark" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-ARov/mYPTQEndU2yeNBVzM1+QH+PbEikl1nr+9LRRgg='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io https://api.web3forms.com; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="preload" href="../fonts/inter-Regular.woff?v=2" as="font" type="font/woff" crossorigin />
+
+  <!-- Theme: saved choice, else the visitor's system setting (runs before paint, no flash) -->
+  <script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("theme"); } catch (e) {}
+    if (t !== "light" && t !== "dark") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+
+  </script>
+
+  <link rel="stylesheet" href="../style.css?v=20261113j" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="../" class="logo">Iakovos Ellinas<span>.</span></a>
+      <div class="nav-actions">
+        <a class="case-back" href="../#case-studies">&larr; All case studies</a>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Light / dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero case-hero">
+      <div class="container">
+        <p class="eyebrow"><span class="dot"></span>Case study · ISO/IEC 27001 implementation</p>
+        <h1>Getting a SaaS company to ISO 27001 without drowning it in paperwork</h1>
+        <p class="hero-lead">How I would scope, assess and evidence an ISMS for a growing company whose bank customers want certification within a year.</p>
+        <p class="case-disclaimer">Sample work. The company and all figures below are fictional and do not describe any client engagement. The scenario reflects common situations in this type of project.</p>
+        <dl class="case-facts"><div><dt>Company</dt><dd>Tessaro Cloud (fictional), B2B SaaS, 70 staff</dd></div><div><dt>Hosting</dt><dd>Public cloud, fully remote engineering</dd></div><div><dt>Driver</dt><dd>Bank customers require ISO 27001 in their due diligence</dd></div><div><dt>Constraint</dt><dd>No dedicated security team, 12 months, sceptical engineers</dd></div></dl>
+      </div>
+    </section>
+    <section class="section case-section">
+      <div class="container case-container">
+        <p class="section-label">01 · The situation</p>
+        <h2>What the company was facing</h2>
+        <p>Two financial services prospects told Tessaro Cloud that ISO 27001 certification would be a condition for signing. The company had good engineering habits, but nothing written down: no risk assessment, scattered policies, and security knowledge concentrated in two senior engineers.</p>
+        <p>The real risk was not failing the audit. It was building an ISMS that passes once and then decays, because nobody in engineering sees it as part of their work.</p>
+      </div>
+    </section>
+    <section class="section case-section section-alt">
+      <div class="container case-container">
+        <p class="section-label">02 · Key decisions</p>
+        <h2>Five decisions that shaped the project</h2>
+        <ol class="decisions">
+          <li class="decision">
+            <h3>Scope the ISMS around the product, not the whole company</h3>
+            <p><strong>Decision:</strong> The scope covers the SaaS platform and the functions that support it: engineering, cloud operations, customer support, HR onboarding and offboarding, and supplier management. Interfaces with out-of-scope areas, such as marketing systems, are documented as required by clause 4.3.</p>
+            <p><strong>Why:</strong> This is what customers actually rely on, and it keeps the first certification achievable within 12 months.</p>
+            <p class="trade"><strong>Trade-off:</strong> A narrower scope must be explained clearly to customers, so the scope statement is written in plain language for due diligence questionnaires.</p>
+          </li>
+          <li class="decision">
+            <h3>Use scenario-based risk assessment instead of a huge asset list</h3>
+            <p><strong>Decision:</strong> Around 40 risk scenarios (for example, "leaked cloud credentials lead to customer data exposure"), each with a business risk owner, a 5×5 likelihood and impact rating and a treatment decision.</p>
+            <p><strong>Why:</strong> Engineers and managers can discuss scenarios. A 300-line asset register would be filled in once and never read again.</p>
+            <p class="trade"><strong>Trade-off:</strong> Asset information still has to exist for some controls, so it is kept in the tools the company already uses rather than in a separate spreadsheet.</p>
+          </li>
+          <li class="decision">
+            <h3>Justify every Annex A decision from the risk assessment</h3>
+            <p><strong>Decision:</strong> All 93 Annex A controls of ISO/IEC 27001:2022 are considered in the Statement of Applicability. Each one is linked to a risk, a contract or a legal requirement, or has a written reason for exclusion.</p>
+            <p><strong>Why:</strong> Auditors challenge the reasons behind the Statement of Applicability, not the number of controls. A risk-driven SoA is also easier to defend to customers.</p>
+            <p class="trade"><strong>Trade-off:</strong> Writing real justifications takes longer than ticking boxes, but it saves time in Stage 1 and in every customer questionnaire after that.</p>
+          </li>
+          <li class="decision">
+            <h3>Collect evidence where the work already happens</h3>
+            <p><strong>Decision:</strong> Change management evidence comes from pull request reviews, access reviews from the identity provider, and vulnerability management from existing ticket workflows. Policies describe how the team already works, after small improvements.</p>
+            <p><strong>Why:</strong> Evidence that is a by-product of daily work stays current after certification. Separate compliance tasks are the first thing to be dropped when the team is busy.</p>
+            <p class="trade"><strong>Trade-off:</strong> Some evidence is less polished than a template would be, so the internal audit checks that it is complete and traceable.</p>
+          </li>
+          <li class="decision">
+            <h3>Run a real internal audit and management review before Stage 1</h3>
+            <p><strong>Decision:</strong> An internal audit against all clauses and a sample of Annex A controls, followed by a management review with recorded decisions.</p>
+            <p><strong>Why:</strong> It finds gaps while there is still time to fix them, and it shows the certification body that the management system works, not only that documents exist.</p>
+            <p class="trade"><strong>Trade-off:</strong> It costs about three weeks before the certification audit, which has to be planned into the 12 months from the start.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="section case-section">
+      <div class="container case-container">
+        <p class="section-label">03 · Artefact excerpt</p>
+        <h2>Statement of Applicability (excerpt)</h2>
+        <div class="table-wrap"><table class="case-table">
+          <caption>Example SoA entries with justification (fictional)</caption>
+          <thead><tr><th scope="col">Annex A control</th><th scope="col">Status</th><th scope="col">Justification</th></tr></thead>
+          <tbody><tr><td>5.23 Information security for use of cloud services</td><td>Applicable</td><td>The whole platform runs on public cloud; misconfiguration and shared-responsibility gaps are top-ranked risks.</td></tr><tr><td>8.28 Secure coding</td><td>Applicable</td><td>Vulnerabilities in the company's own code are a primary route to customer data exposure.</td></tr><tr><td>7.1–7.14 Physical controls</td><td>Applicable, partly inherited</td><td>Office controls are operated by the company; data centre physical security is covered by the cloud provider and verified through its independent assurance reports.</td></tr><tr><td>8.30 Outsourced development</td><td>Not applicable (for now)</td><td>All development is in-house. To be reviewed if contractors are engaged; the supplier process includes a trigger for this.</td></tr></tbody>
+        </table></div>
+        <p class="table-note">An exclusion is a decision with a review trigger, not a permanent answer.</p>
+      </div>
+    </section>
+    <section class="section case-section section-alt">
+      <div class="container case-container">
+        <p class="section-label">04 · What gets delivered</p>
+        <h2>Deliverables</h2>
+        <ul class="case-list"><li>ISMS scope statement written for auditors and for customers</li><li>Risk methodology, risk register and risk treatment plan with named owners</li><li>Statement of Applicability covering all 93 Annex A controls</li><li>A core set of policies and procedures that match how the team works</li><li>Evidence map showing where each control's evidence lives</li><li>Internal audit report, management review minutes and corrective actions</li></ul>
+      </div>
+    </section>
+    <section class="section case-section">
+      <div class="container case-container">
+        <p class="section-label">05 · After certification</p>
+        <h2>What I would keep watching</h2>
+        <ul class="case-list"><li><strong>Evidence drift:</strong> controls that worked during the audit quietly stop producing evidence. A quarterly evidence check prevents surprises at the surveillance audit.</li><li><strong>Key-person dependency:</strong> security knowledge still sits with a few engineers. Documented runbooks and a deputy for each control owner reduce this.</li><li><strong>Supplier assurance:</strong> new SaaS tools appear quickly. The onboarding process has to catch them before they hold customer data.</li></ul>
+        <p class="case-takeaway">The goal is not a certificate. It is a management system the company can still run, and prove, a year later.</p>
+        <p class="case-sources">Reference: <a href="https://www.iso.org/standard/27001" target="_blank" rel="noopener">ISO/IEC 27001:2022, Information security management systems (ISO)</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Iakovos Ellinas · Information Security &amp; Technology Consultant · Nicosia, Cyprus</p>
+    <p class="footer-trust">Privacy by design: no cookies, no trackers, no third-party scripts or fonts. Found a security issue? See <a href="/.well-known/security.txt">security.txt</a>.</p>
+  </footer>
+  <script src="../site.js?v=20261113d" defer></script>
+</body>
+</html>
