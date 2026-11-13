@@ -34,7 +34,7 @@
     var meta = document.querySelector('meta[name="theme-color"]');
     function apply(t) {
       root.setAttribute("data-theme", t);
-      if (btn) btn.setAttribute("aria-label", t === "dark" ? "Switch to light mode" : "Switch to dark mode");
+      if (btn) btn.setAttribute("aria-label", t === "dark" ? (btn.getAttribute("data-label-light") || "Switch to light mode") : (btn.getAttribute("data-label-dark") || "Switch to dark mode"));
       if (meta) meta.setAttribute("content", t === "dark" ? "#05080f" : "#06122b");
     }
     apply(root.getAttribute("data-theme") || "light");
@@ -70,6 +70,7 @@
     var form = document.getElementById("contact-form");
     if (!form) return;
     var status = form.querySelector(".form-status");
+    var M = form.dataset;
     function say(msg, ok) { status.textContent = msg; status.className = "form-status " + (ok ? "ok" : "err"); }
 
     form.addEventListener("submit", function (e) {
@@ -77,19 +78,19 @@
       if (form.website.value) return;                       /* bot filled the trap */
       var name = form.name.value.trim(), email = form.email.value.trim(), msg = form.message.value.trim();
       if (!name || !msg || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-        say("Please add your name, a valid email and a message.", false); return;
+        say(M.msgInvalid || "Please add your name, a valid email and a message.", false); return;
       }
       var company = form.company.value.trim();
       if (!FORM_ENDPOINT) {
         var body = msg + "\n\n" + name + (company ? ", " + company : "") + "\n" + email;
-        window.location.href = "mailto:" + TO + "?subject=" + encodeURIComponent("Website contact: " + name) + "&body=" + encodeURIComponent(body);
-        say("Your email app should open with the message ready to send.", true);
+        window.location.href = "mailto:" + TO + "?subject=" + encodeURIComponent((M.msgSubject || "Website contact: ") + name) + "&body=" + encodeURIComponent(body);
+        say(M.msgMailto || "Your email app should open with the message ready to send.", true);
         return;
       }
       var btn = form.querySelector("button[type=submit]"); btn.disabled = true;
       fetch(FORM_ENDPOINT, { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form) })
-        .then(function (r) { if (!r.ok) throw 0; form.reset(); say("Thank you, your message has been sent. I will reply soon.", true); })
-        .catch(function () { say("Something went wrong. Please try again or reach me on LinkedIn.", false); })
+        .then(function (r) { if (!r.ok) throw 0; form.reset(); say(M.msgSent || "Thank you, your message has been sent. I will reply soon.", true); })
+        .catch(function () { say(M.msgError || "Something went wrong. Please try again or reach me on LinkedIn.", false); })
         .then(function () { btn.disabled = false; });
     });
   })();
@@ -106,4 +107,22 @@
     }
     if (img.complete && img.naturalWidth === 0) fallback();
     img.addEventListener("error", fallback);
+  })();
+
+  /* Gentle reveal of content as it scrolls into view.
+     Only content below the first screen is affected, and nothing moves
+     for visitors who have turned off animations. */
+  (function () {
+    if (!("IntersectionObserver" in window)) return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var items = document.querySelectorAll(".section h2, .mode, .pillar, .path, .tl-item, .showcase, .record, .cert, .testimonial, .insight, .contact-form, .research-card");
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.remove("reveal-wait"); obs.unobserve(en.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    var vh = window.innerHeight;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].getBoundingClientRect().top > vh) { items[i].classList.add("reveal", "reveal-wait"); obs.observe(items[i]); }
+    }
   })();
