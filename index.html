@@ -19,7 +19,8 @@
   <meta name="twitter:image" content="https://iakovosellinas.github.io/og-image.png" />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <meta name="theme-color" content="#020617" />
+  <meta name="theme-color" content="#06122b" />
+  <meta name="color-scheme" content="light dark" />
 
   <script type="application/ld+json">
   {
@@ -43,20 +44,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet" />
 
+  <!-- Theme: saved choice, else the visitor's system setting (runs before paint, no flash) -->
+  <script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("theme"); } catch (e) {}
+    if (t !== "light" && t !== "dark") {
+      t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+
+  </script>
+
   <!-- ?v= forces browsers to load the new stylesheet instead of a cached old one -->
-  <link rel="stylesheet" href="style.css?v=20261108b" />
+  <link rel="stylesheet" href="style.css?v=20261113b" />
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <nav class="navbar">
       <a href="#home" class="logo">Iakovos Ellinas<span>.</span></a>
-
-      <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
 
       <ul class="nav-links">
         <li><a href="#expertise">Expertise</a></li>
@@ -67,10 +77,22 @@
         <li><a href="#contact">Contact</a></li>
         <li><a href="Iakovos_Ellinas_CV.pdf?v=20261108" class="nav-cta" target="_blank" rel="noopener">Download CV</a></li>
       </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Light / dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+        </button>
+        <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <!-- HERO -->
     <section id="home" class="hero">
       <div class="container hero-inner">
@@ -126,7 +148,7 @@
     <section id="about" class="section">
       <div class="container about-grid">
         <div>
-          <p class="section-label">About</p>
+          <p class="section-label"><span class="num">01</span>About</p>
           <h2>From numbers to governance</h2>
           <p>
             My path into cybersecurity started with numbers. A BSc in Mathematics and Statistics taught me to think in risk, probability and structure, and an MSc in Computer and Network Security gave me the technical depth behind it. Serving as an army officer taught me to lead a team, take ownership and stay calm under pressure.
@@ -150,7 +172,7 @@
     <!-- EXPERTISE -->
     <section id="expertise" class="section section-alt">
       <div class="container">
-        <p class="section-label">What I do</p>
+        <p class="section-label"><span class="num">02</span>What I do</p>
         <h2>Areas of expertise</h2>
 
         <div class="grid-4">
@@ -189,7 +211,7 @@
     <!-- EXPERIENCE -->
     <section id="experience" class="section">
       <div class="container">
-        <p class="section-label">Experience</p>
+        <p class="section-label"><span class="num">03</span>Experience</p>
         <h2>Professional experience</h2>
 
         <div class="timeline">
@@ -247,7 +269,7 @@
     <!-- RESEARCH -->
     <section id="research" class="section section-alt">
       <div class="container">
-        <p class="section-label">MSc Thesis · Published</p>
+        <p class="section-label"><span class="num">04</span>MSc Thesis · Published</p>
         <h2>Research</h2>
 
         <article class="research">
@@ -272,7 +294,7 @@
     <!-- CERTIFICATIONS -->
     <section id="certifications" class="section">
       <div class="container">
-        <p class="section-label">Credentials</p>
+        <p class="section-label"><span class="num">05</span>Credentials</p>
         <h2>Certifications</h2>
 
         <div class="grid-3">
@@ -332,7 +354,7 @@
     <!-- INSIGHTS -->
     <section id="insights" class="section section-alt">
       <div class="container">
-        <p class="section-label">Insights</p>
+        <p class="section-label"><span class="num">06</span>Insights</p>
         <h2>Writing on GRC</h2>
         <p class="section-intro">From my LinkedIn series GRC Simply Explained and GRC Risk Radar: governance, risk, privacy and AI governance explained in plain language.</p>
 
@@ -369,7 +391,7 @@
     <section id="contact" class="section contact">
       <div class="container contact-inner">
         <div>
-          <p class="section-label">Contact</p>
+          <p class="section-label"><span class="num">07</span>Contact</p>
           <h2>Let's connect</h2>
           <p>For professional contact, collaboration or networking on security, privacy and AI governance, the best way to reach me is through LinkedIn.</p>
         </div>
@@ -413,6 +435,40 @@
     document.addEventListener("click", function (e) {
       if (!links.contains(e.target) && !toggle.contains(e.target)) setOpen(false);
     });
+  })();
+  /* Light / dark mode toggle (choice is remembered on this device) */
+  (function () {
+    var root = document.documentElement;
+    var btn = document.querySelector(".theme-toggle");
+    var meta = document.querySelector('meta[name="theme-color"]');
+    function apply(t) {
+      root.setAttribute("data-theme", t);
+      if (btn) btn.setAttribute("aria-label", t === "dark" ? "Switch to light mode" : "Switch to dark mode");
+      if (meta) meta.setAttribute("content", t === "dark" ? "#05080f" : "#06122b");
+    }
+    apply(root.getAttribute("data-theme") || "light");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      apply(next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    });
+  })();
+
+  /* Highlight the menu item of the section on screen */
+  (function () {
+    if (!("IntersectionObserver" in window)) return;
+    var links = document.querySelectorAll('.nav-links a[href^="#"]');
+    var map = {};
+    for (var i = 0; i < links.length; i++) map[links[i].getAttribute("href").slice(1)] = links[i];
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        for (var k in map) map[k].classList.remove("is-active");
+        if (map[en.target.id]) map[en.target.id].classList.add("is-active");
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    document.querySelectorAll("main section[id]").forEach(function (sec) { obs.observe(sec); });
   })();
   </script>
 </body>
