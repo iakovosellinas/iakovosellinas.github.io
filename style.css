@@ -1169,3 +1169,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-bright);
 .notfound h1 { font-family: "Lora", Georgia, serif; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; margin-bottom: 14px; }
 .notfound p { color: #cbd5e1; max-width: 560px; margin-bottom: 26px; }
 @media (max-width: 980px) { .path li:last-child { padding-bottom: 0; } }
+
+/* Hero panel: Lead Auditor line under "What I do" */
+.cred-la { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(227, 179, 65, 0.3); }
+.cred-la .cred-title { margin-bottom: 4px; }
+.cred-la-std { color: #fff; font-weight: 700; font-size: 1.02rem; }
+.cred-list li:last-child { border-bottom: none; }
