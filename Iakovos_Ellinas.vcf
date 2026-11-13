@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Ellinas;Iakovos;;;
+FN:Iakovos Ellinas
+TITLE:Information Security & Technology Consultant
+ORG:KPMG Cyprus
+EMAIL;TYPE=INTERNET:iakovosellinas01@gmail.com
+URL:https://iakovosellinas.github.io
+item1.URL:https://www.linkedin.com/in/iakovosellinas
+item1.X-ABLabel:LinkedIn
+ADR;TYPE=WORK:;;;Nicosia;;;Cyprus
+NOTE:GRC\, Privacy and AI Governance. ISO/IEC 27001\, 27701 and 42001 Lead Auditor.
+END:VCARD
