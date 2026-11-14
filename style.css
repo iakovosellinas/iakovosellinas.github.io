@@ -1162,6 +1162,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-bright);
   .insight-top .cover { margin-top: -25px; }
 }
 
+/* Odd number of insight cards: last one spans the full row */
+.grid-2 > .insight:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
 /* ===== 404 page ===== */
 
 .notfound { min-height: 100vh; display: flex; align-items: center; }
