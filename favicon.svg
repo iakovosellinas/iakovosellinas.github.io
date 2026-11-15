@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="6" fill="#8b2a1c"/>
-  <text x="32" y="42" text-anchor="middle" font-family="'IBM Plex Mono', Menlo, Consolas, monospace" font-size="26" font-weight="500" letter-spacing="1" fill="#f3efe6">IE</text>
+  <rect width="64" height="64" fill="#141414"/>
+  <text x="10" y="44" font-family="'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="600" letter-spacing="-1" fill="#f4f4f1">IE</text>
+  <rect x="48" y="38" width="6" height="6" fill="#ff6b3d"/>
 </svg>
