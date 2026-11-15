@@ -46,7 +46,7 @@
       btn.setAttribute("aria-label", t === "dark" ? (btn.getAttribute("data-label-light") || "Switch to light mode") : (btn.getAttribute("data-label-dark") || "Switch to dark mode"));
       btn.setAttribute("aria-pressed", t === "dark" ? "true" : "false");
     }
-    if (meta) meta.setAttribute("content", t === "dark" ? "#0e141b" : "#ffffff");
+    if (meta) meta.setAttribute("content", t === "dark" ? "#0a0a0a" : "#ffffff");
   }
   apply(root.getAttribute("data-theme") || "light");
   if (!btn) return;
