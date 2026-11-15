@@ -1156,6 +1156,15 @@ main > .section:not(.testimonial-section):not(.contact):not(.case-section) > .co
 .tl-date { font-size: 15px; font-weight: 600; }
 .cert-id { font-size: 14px; }
 
+
+/* Training certificate */
+.cert-doc { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 32px; align-items: center; margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--gold); }
+.cert-doc img { width: 100%; height: auto; border: 1px solid var(--line); background: #fff; }
+.cert-doc figcaption { display: flex; flex-direction: column; gap: 8px; }
+.cert-doc h4 { font-size: 24px; }
+.cert-doc .cert-name { color: var(--ink-2); }
+@media (max-width: 860px) { .cert-doc { grid-template-columns: 1fr; gap: 20px; } }
+
 /* ---------- Print ---------- */
 @media print {
   :root, [data-theme="dark"] { --paper: #fff; --paper-2: #fff; --card: #fff; --ink: #000; --ink-2: #222; --muted: #444; --line: #bbb; --accent: #86651b; --link: #000; --on-ink: #fff; --shadow: none; }
@@ -1168,7 +1177,7 @@ main > .section:not(.testimonial-section):not(.contact):not(.case-section) > .co
   .insight[hidden] { display: flex !important; }
   .section, .case-section { padding: 18pt 0; break-inside: auto; }
   .section-alt { background: #fff; }
-  .card, .record, .decision, .tl-item, .cert { break-inside: avoid; box-shadow: none; }
+  .card, .record, .decision, .tl-item, .cert, .cert-doc { break-inside: avoid; box-shadow: none; }
   .contact { background: #fff; color: #000; }
   .contact h2, .contact-copy > p { color: #000; }
   .reveal-wait { opacity: 1 !important; transform: none !important; }
