@@ -1176,11 +1176,37 @@ main > .section:not(.testimonial-section):not(.contact):not(.case-section) > .co
   .insight > *, .insight > .card-tag { grid-column: 2; }
 }
 
+
+/* Certificate images */
+.cert-img { display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 3; margin-bottom: 14px; padding: 10px; background: #ffffff; border: 1px solid var(--line); transition: border-color 0.2s ease; }
+.cert-img { overflow: hidden; }
+.cert-img img { width: 100%; height: 100%; object-fit: contain; }
+.cert-img:hover { border-color: var(--gold); }
+.cert-small .cert-img { aspect-ratio: 3 / 2; padding: 8px; }
+.cert-more { font-size: 14px; }
+.cert-doc > a { display: block; }
+
+/* Phones: stack the research block and let long chip rows scroll sideways */
+@media (max-width: 860px) {
+  .showcase { grid-template-columns: 1fr; gap: 32px; }
+  .showcase-visual { max-width: 520px; }
+  .grid-3.cert-small { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .doc-checks li { flex-wrap: wrap; gap: 2px 10px; }
+  .doc-checks b { white-space: normal; }
+  .ev-caps, .filters { flex-wrap: nowrap !important; overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; scrollbar-width: thin; padding-bottom: 10px; }
+  .ev-cap, .chip { flex: 0 0 auto; white-space: nowrap !important; scroll-snap-align: start; }
+  .filters { margin-right: calc(-1 * var(--pad)); padding-right: var(--pad); }
+  .grid-3.cert-small { grid-template-columns: 1fr; }
+  .cert-small .cert-img { max-width: 360px; }
+}
+
 /* ---------- Print ---------- */
 @media print {
   :root, [data-theme="dark"] { --paper: #fff; --paper-2: #fff; --card: #fff; --ink: #000; --ink-2: #222; --muted: #444; --line: #bbb; --accent: #86651b; --link: #000; --on-ink: #fff; --shadow: none; }
   body { font-size: 11pt; background: #fff; }
-  .site-header, .skip-link, .menu-toggle, .theme-toggle, .lang-switch, .hero-buttons, .contact-buttons, .contact-form, .filters, .ev-explorer, .mode-tabs, .showcase-btn, .more-link, .insight-link, .cover, .insight-img, .showcase-visual, .exhibit::before { display: none !important; }
+  .site-header, .skip-link, .menu-toggle, .theme-toggle, .lang-switch, .hero-buttons, .contact-buttons, .contact-form, .filters, .ev-explorer, .mode-tabs, .showcase-btn, .more-link, .insight-link, .cover, .insight-img, .cert-img, .showcase-visual, .exhibit::before { display: none !important; }
   .sec-head, .about-grid > div > .sec-head { position: static !important; }
   .has-explorer .ev-wrap { display: block !important; }
   .modes.is-tabs { display: grid !important; grid-template-columns: 1fr; }
