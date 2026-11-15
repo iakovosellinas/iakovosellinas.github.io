@@ -1,7 +1,6 @@
 Fonts in this folder are self-hosted subsets of:
 
 - Commissioner, Copyright 2019 The Commissioner Project Authors (https://github.com/kosbarts/Commissioner)
-- JetBrains Mono, Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
 
 Files taken from the Fontsource packages (https://fontsource.org).
 All are licensed under the SIL Open Font License, Version 1.1: https://openfontlicense.org
